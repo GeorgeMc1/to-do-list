@@ -1,6 +1,4 @@
 import {useState} from "react";
-import { DndProvider } from "react-dnd";
-import {HTML5Backend} from "react-dnd-html5-backend"
 import './App.css';
 import ListItem from "./components/ListItem";
 
@@ -30,7 +28,6 @@ function App() {
   }
   return (
     <div className="App">
-      <DndProvider backend={HTML5Backend}>
       <h1>To Do List</h1>
       <div id="inputBox">
         <input id="input" onChange={getInput} onKeyDown={enterKey} value={input}></input>
@@ -41,7 +38,6 @@ function App() {
           return <ListItem key={i} label={item} click={() => removeItem(i)} enter={enterKey}/>
         })}
       </div>
-      </DndProvider>
     </div>
   );
 }

@@ -1,3 +1,10 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  background-color: black;
+  color: white;
+}
 .App {
   text-align: center;
 }
@@ -19,11 +26,16 @@ input{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 30px;
   width: 250px;
+  padding: 5px;
+  background-color: rgb(20, 20, 20);
+  transition: width 0.5s, opacity 0.5s;
 }
 .itemButtons{
   display: flex;
 }
 .green{
-  background-color: green;
+  opacity: 0.5 !important;
+  width: 200px;
 }
