@@ -7,7 +7,7 @@ const ListItem = (props) => {
         setShowButtons(true);
         setTimeout(() => {
             setShowButtons(false)
-        }, 500);
+        }, 1000);
     }
     return(
         <div className={status ? "green item" : "item"} onMouseOver={() => setShowButtons(true)} onMouseOut={() => setShowButtons(false)} onClick={hideDelay}>
