@@ -3,14 +3,8 @@ import {useState} from "react";
 const ListItem = (props) => {
     const [status, setStatus] = useState(false);
     const [showButtons, setShowButtons] = useState(false);
-    const hideDelay = () => {
-        setShowButtons(true);
-        setTimeout(() => {
-            setShowButtons(false)
-        }, 1000);
-    }
     return(
-        <div className={status ? "green item" : "item"} onMouseOver={() => setShowButtons(true)} onMouseOut={() => setShowButtons(false)} onClick={hideDelay}>
+        <div className={status ? "green item" : "item"} onMouseOver={() => setShowButtons(true)} onMouseOut={() => setShowButtons(false)}>
             <label>{props.label}</label>
             {showButtons &&(
                 <div className="itemButtons">
